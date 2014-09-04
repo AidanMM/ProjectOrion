@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.0</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C788DFEF-EC3F-4E52-A011-26643D3805C8}</ProjectGuid>
+    <ProjectTypeGuids>{69878862-DA7D-4DC6-B0A1-50D8FAB4242F};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>ProjectOrion</RootNamespace>
+    <AssemblyName>ProjectOrion</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Sce.PlayStation.Core" />
+    <Reference Include="Sce.PlayStation.HighLevel.GameEngine2D" />
+    <Reference Include="Sce.PlayStation.HighLevel.Physics2D" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppMain.cs" />
+    <Compile Include="ObjectController.cs" />
+    <Compile Include="BasicObject.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Bullet.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="EnemyPlatform.cs" />
+    <Compile Include="DoorPortal.cs" />
+    <Compile Include="BossEnemy.cs" />
+    <Compile Include="Particle.cs" />
+    <Compile Include="ParticleSystem.cs" />
+    <Compile Include="WorldSelection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ShaderProgram Include="shaders\Simple.fcg" />
+    <ShaderProgram Include="shaders\Simple.vcg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PsmMetadata Include="app.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Sce\Sce.Psm.CSharp.targets" />
+  <ItemGroup>
+    <Content Include="sprites\Test.png" />
+    <Content Include="sprites\TestGround.png" />
+    <Content Include="sprites\BulletTest.png" />
+    <Content Include="sprites\TestWall.png" />
+    <Content Include="sprites\TestBlock.png" />
+    <Content Include="sprites\TestLongBlock.png" />
+    <Content Include="sprites\Ground1long.png" />
+    <Content Include="sprites\Ground2long.png" />
+    <Content Include="sprites\Ground3long.png" />
+    <Content Include="sprites\Ground4long.png" />
+    <Content Include="sprites\Ground5long.png" />
+    <Content Include="sprites\Wall2long.png" />
+    <Content Include="sprites\Wall3long.png" />
+    <Content Include="sprites\Wall4long.png" />
+    <Content Include="sprites\Wall5long.png" />
+    <Content Include="sprites\PortalTile.png" />
+    <Content Include="sprites\BossTest.png" />
+    <Content Include="sprites\Level1-1.png" />
+    <Content Include="sprites\Level1-2.png" />
+    <Content Include="sprites\Level1-3.png" />
+    <Content Include="sprites\WorldSelect.png" />
+    <Content Include="sprites\Level2-1.png" />
+    <Content Include="sprites\Level2-2.png" />
+    <Content Include="sprites\Player.png" />
+    <Content Include="sprites\SampleBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="sprites\" />
+  </ItemGroup>
+</Project>
